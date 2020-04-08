@@ -3,10 +3,13 @@ package com.jxjz.answer.controller;
 import com.jxjz.answer.form.WheelImgForm;
 import com.jxjz.answer.service.IWheelImgService;
 import com.jxjz.answer.util.IMoocJSONResult;
+import com.jxjz.answer.util.UploadFileUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping(value = "/wheelimg")
@@ -27,5 +30,10 @@ public class CWheelImgController {
     public IMoocJSONResult addWheelImg(@RequestBody WheelImgForm wheelImgForm){
         iWheelImgService.addWheelImge(wheelImgForm);
         return IMoocJSONResult.ok();
+    }
+
+    @PostMapping(value = "/uploadImage", consumes = "multipart/*", headers = "content-type=multipart/form-data")
+    public IMoocJSONResult upload(@ApiParam(value = "上传的图片", required = true) @RequestParam("file") MultipartFile file){
+        return UploadFileUtils.upload(file);
     }
 }
