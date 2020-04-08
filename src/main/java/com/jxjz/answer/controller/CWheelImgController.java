@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/wheelimg")
-@Api(value = "轮播图接口", tags = "轮播图接口")
+@Api(value = "轮播图接口", tags = "轮播图接口测试")
 public class CWheelImgController {
     @Autowired
     public IWheelImgService iWheelImgService;
