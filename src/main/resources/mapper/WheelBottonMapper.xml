@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jxjz.answer.dao.WheelBottonMapper" >
+  <resultMap id="BaseResultMap" type="com.jxjz.answer.pojo.WheelBotton" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="buttonTitle" property="buttontitle" jdbcType="VARCHAR" />
+    <result column="buttonImage" property="buttonimage" jdbcType="VARCHAR" />
+    <result column="paper_id" property="paperId" jdbcType="INTEGER" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+</mapper>

@@ -1,0 +1,89 @@
+#  Tomcat  服务配置server:server:server:
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 8088
+  servlet:
+    #    context-path: /scott
+    #    session过期时间
+    session:
+      timeout: 30m
+  # 访问路径 localhost/scott
+
+  # THYMELEAF 网页静态化配置
+  thymeleaf:
+    # 是否启用模板缓存
+    cache: false
+    # 应用于模板的模板模式，参考TemplateMode 枚举
+    mode: HTML5
+    # 模板文件编码
+    encoding: UTF-8
+    # 构建URL时预先查看视图名称的前缀
+    prefix: classpath:/templates/
+    # 在构建URL时附加到视图名称的后缀
+    suffix: .html
+    # 文件解析格式
+    content-type: text/html
+  resources: # 指定静态资源的路径
+    static-locations: classpath:/static/,classpath:/templates/
+  # 默认值为 classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  static-path-pattern: /**
+
+spring:
+  # 运行环境 dev:开发环境|test:测试环境|prod:生产环境
+  profiles:
+    active: dev
+  # jackson
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+
+
+#  redis:
+#    ##redis数据库索引(默认为零)
+#    database: 0
+#    ##redis服务器地址
+#    host: 127.0.0.1
+#    ##端口
+#    port: 6379
+#    ##密码(默认为空)
+#    password:
+
+## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
+mybatis:
+  mapper-locations: classpath:mapper/*  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.jxjz.answer.pojo # 注意：对应实体类的路径
+#pagehelper 分页插件
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+  returnPageInfo: check
+
+##七牛云配置
+#qiniuyun1:
+#  accessKey: NjUj_ap6E3zjQFwEGgNMAjlFklg1ug2FGGUvi4tl
+#  secretKey: 6yja3PefHrLw4-y3llVSScJNejvyp0bYYG58SRHP
+#  bucket: hxf
+#  path: q5ombp2x8.bkt.clouddn.com
+#  key: .jpg
+
+
+#日志配置
+logging:
+  level:
+    com:
+      jxjz:
+        answer: info
+  file:
+    max-size: 10m
+    path: logs/answer.log
+

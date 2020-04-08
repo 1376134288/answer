@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jxjz.answer.dao.WheelImgMapper" >
+  <resultMap id="BaseResultMap" type="com.jxjz.answer.pojo.WheelImg" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="img_title" property="imgTitle" jdbcType="VARCHAR" />
+    <result column="to_pageurl" property="toPageurl" jdbcType="VARCHAR" />
+    <result column="img_path" property="imgPath" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+</mapper>

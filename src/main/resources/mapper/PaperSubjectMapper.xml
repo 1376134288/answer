@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jxjz.answer.dao.PaperSubjectMapper" >
+  <resultMap id="BaseResultMap" type="com.jxjz.answer.pojo.PaperSubject" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="mold" property="mold" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="a_option" property="aOption" jdbcType="VARCHAR" />
+    <result column="b_option" property="bOption" jdbcType="VARCHAR" />
+    <result column="c_option" property="cOption" jdbcType="VARCHAR" />
+    <result column="d_option" property="dOption" jdbcType="VARCHAR" />
+    <result column="e_option" property="eOption" jdbcType="VARCHAR" />
+    <result column="answer" property="answer" jdbcType="VARCHAR" />
+    <result column="analysis" property="analysis" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="uploadAdminUserid" property="uploadadminuserid" jdbcType="INTEGER" />
+    <result column="paper_id" property="paperId" jdbcType="INTEGER" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+</mapper>

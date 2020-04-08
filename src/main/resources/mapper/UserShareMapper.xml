@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jxjz.answer.dao.UserShareMapper" >
+  <resultMap id="BaseResultMap" type="com.jxjz.answer.pojo.UserShare" >
+    <result column="share_user_num" property="shareUserNum" jdbcType="INTEGER" />
+    <result column="new_user_num" property="newUserNum" jdbcType="INTEGER" />
+  </resultMap>
+
+</mapper>
