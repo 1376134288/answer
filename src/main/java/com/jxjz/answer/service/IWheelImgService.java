@@ -1,5 +1,6 @@
 package com.jxjz.answer.service;
 
+import com.jxjz.answer.form.WheelImgForm;
 import com.jxjz.answer.pojo.WheelImg;
 
 import java.util.List;
@@ -16,7 +17,6 @@ public interface IWheelImgService {
     public List<WheelImg> queryAllImg();
 
     //增加轮播图
-    public int addWheelImg(WheelImg wheelImg);
-
+    public void addWheelImge(WheelImgForm wheelImgForm);
 
 }

@@ -1,8 +1,10 @@
 package com.jxjz.answer.service.impl;
 
 import com.jxjz.answer.dao.WheelImgMapper;
+import com.jxjz.answer.form.WheelImgForm;
 import com.jxjz.answer.pojo.WheelImg;
 import com.jxjz.answer.service.IWheelImgService;
+import org.apache.ibatis.annotations.Insert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +28,7 @@ public class WheelImgServiceImpl implements IWheelImgService {
     }
 
     @Override
-    public int addWheelImg(WheelImg wheelImg) {
-        return wheelImgMapper.insert(wheelImg);
+    public void addWheelImge(WheelImgForm wheelImgForm) {
+        wheelImgMapper.insertWheelImg(wheelImgForm);
     }
 }

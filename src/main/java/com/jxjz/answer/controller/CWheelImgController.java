@@ -1,6 +1,6 @@
 package com.jxjz.answer.controller;
 
-import com.jxjz.answer.pojo.WheelImg;
+import com.jxjz.answer.form.WheelImgForm;
 import com.jxjz.answer.service.IWheelImgService;
 import com.jxjz.answer.util.IMoocJSONResult;
 import io.swagger.annotations.Api;
@@ -24,11 +24,8 @@ public class CWheelImgController {
 
     @PostMapping("/addWheelImg")
     @ApiOperation(value = "增加轮播图相关信息")
-    public IMoocJSONResult addWheelImg(@RequestBody WheelImg wheelImg){
-        if(iWheelImgService.addWheelImg(wheelImg)>=1){
-            return IMoocJSONResult.ok();
-        }else {
-            return IMoocJSONResult.errorMsg("轮播信息出现错误!");
-        }
+    public IMoocJSONResult addWheelImg(@RequestBody WheelImgForm wheelImgForm){
+        iWheelImgService.addWheelImge(wheelImgForm);
+        return IMoocJSONResult.ok();
     }
 }
