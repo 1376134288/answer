@@ -20,7 +20,7 @@ import java.util.UUID;
 public class UploadFileUtils {
 
     /**
-     * 商品图片路径
+     * 轮播图片路径
      */
     @Value("${jxjz.service.path}")
     private String path;

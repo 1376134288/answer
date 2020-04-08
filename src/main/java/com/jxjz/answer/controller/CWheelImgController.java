@@ -20,7 +20,7 @@ public class CWheelImgController {
 
 
     @GetMapping("/getAllImg")
-    @ApiOperation(value = "获取所有轮播图数据")
+    @ApiOperation(value = "获取所有轮播图数据e")
     public IMoocJSONResult getAllImg(){
         return IMoocJSONResult.ok(iWheelImgService.queryAllImg());
     }
@@ -34,6 +34,6 @@ public class CWheelImgController {
 
     @PostMapping(value = "/uploadImage", consumes = "multipart/*", headers = "content-type=multipart/form-data")
     public IMoocJSONResult upload(@ApiParam(value = "上传的图片", required = true) @RequestParam("file") MultipartFile file){
-        return UploadFileUtils.upload(file);
+        return IMoocJSONResult.ok(UploadFileUtils.upload(file));
     }
 }
